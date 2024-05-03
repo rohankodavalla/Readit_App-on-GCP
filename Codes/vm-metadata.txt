@@ -1,0 +1,41 @@
+Base Command
+============
+
+curl "http://metadata.google.internal/computeMetadata/v1/" -H "Metadata-Flavor: Google"
+
+
+---------------------------------------------------------------------------------------------------------
+
+Later I did this - 
+
+rohankodavalla@catalog-vm:~$ curl "http://metadata.google.internal/computeMetadata/v1/" -H "Metadata-Flavor: Google"
+instance/
+oslogin/
+project/
+rohankodavalla@catalog-vm:~$ curl "http://metadata.google.internal/computeMetadata/v1/instance/" -H "Metadata-Flavor: Google"
+attributes/
+cpu-platform
+description
+disks/
+guest-attributes/
+hostname
+id
+image
+licenses/
+machine-type
+maintenance-event
+name
+network-interfaces/
+partner-attributes/
+preempted
+remaining-cpu-time
+scheduling/
+service-accounts/
+tags
+virtual-clock/
+zone
+rohankodavalla@catalog-vm:~$ curl "http://metadata.google.internal/computeMetadata/v1/instance/?recursive=true" -H "Metadata-Flavor: Google"
+{"attributes":{"ssh-keys":"rohankodavalla:ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBGsaT3mWojDP9A5kMe2LzebLV2676IqcqRMJ4aWRFxrMkGBpuK1HJLtzXAszcEXWVhRxWmtrk5nsBqBXpxZzhBw= google-ssh {\"userName\":\"rohankodavalla@gmail.com\",\"expireOn\":\"2024-05-01T21:46:22+0000\"}\nrohankodavalla:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAFbx4pcoAPgae4mQgxUT9Ubi/xEQKGDS5NDNkiqZMoH1GWlI64JAtd+tEC4nT7+crRBO549g/6JwOwTNco0uZ6PDDHg72gHggz0knxt7P5OZuotRC96djbE5pcCGfOwYcAQcF/XcThTglRAjY52iqsUaS2C7piM4wyIq8XPjew5/bv0o4UuFvLQXqUZoVcQg9QXQ9xtmV6CHsag7tQPf2YDoxrEeMSU5mtSOOfuQxZq0DLyqsl3vtUC/UbDsauggqVocosVAH99vMtf4oizYJm22HYgvKDNohi52mf7P2653jNjz50ToAI6gAs4WWdoLiH3PtP8nDKGtUOrO0I9DRY0= google-ssh {\"userName\":\"rohankodavalla@gmail.com\",\"expireOn\":\"2024-05-01T21:46:36+0000\"}","stop-state":"UNSPECIFIED"},"cpuPlatform":"Intel Broadwell","description":"Hosts the catalog part of the ReadIt system","disks":[{"deviceName":"catalog-vm","index":0,"interface":"SCSI","mode":"READ_WRITE","type":"PERSISTENT"}],"guestAttributes":{},"hostname":"catalog-vm.northamerica-northeast1-a.c.graphic-adviser-422016-k7.internal","id":761255610256659005,"image":"projects/debian-cloud/global/images/debian-12-bookworm-v20240415","licenses":[{"id":"2147286739765738111"}],"machineType":"projects/1097944015704/machineTypes/e2-medium","maintenanceEvent":"NONE","name":"catalog-vm","networkInterfaces":[{"accessConfigs":[{"externalIp":"35.203.8.236","type":"ONE_TO_ONE_NAT"}],"dnsServers":["169.254.169.254"],"forwardedIps":[],"gateway":"10.162.0.1","ip":"10.162.0.3","ipAliases":[],"mac":"42:01:0a:a2:00:03","mtu":1460,"network":"projects/1097944015704/networks/default","subnetmask":"255.255.240.0","targetInstanceIps":[]}],"partnerAttributes":{},"preempted":"FALSE","remainingCpuTime":-1,"scheduling":{"automaticRestart":"TRUE","onHostMaintenance":"MIGRATE","preemptible":"FALSE"},"serviceAccounts":{"1097944015704-compute@developer.gserviceaccount.com":{"aliases":["default"],"email":"1097944015704-compute@developer.gserviceaccount.com","scopes":["https://www.googleapis.com/auth/devstorage.read_only","https://www.googleapis.com/auth/logging.write","https://www.googleapis.com/auth/monitoring.write","https://www.googleapis.com/auth/servicecontrol","https://www.googleapis.com/auth/service.management.readonly","https://www.googleapis.com/auth/trace.append"]},"default":{"aliases":["default"],"email":"1097944015704-compute@developer.gserviceaccount.com","scopes":["https://www.googleapis.com/auth/devstorage.read_only","https://www.googleapis.com/auth/logging.write","https://www.googleapis.com/auth/monitoring.write","https://www.googleapis.com/auth/servicecontrol","https://www.googleapis.com/auth/service.management.readonly","https://www.googleapis.com/auth/trace.append"]}},"tags":["http-server","https-server"],"virtualClock":{"driftToken":"0"},"zone":"projects/1097944015704/zones/northamerica-northeast1-a"}rohankodavalla@catalog-vm:~$ 
+
+
+So above is metadata for the instance created 

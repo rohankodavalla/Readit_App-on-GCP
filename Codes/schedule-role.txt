@@ -1,0 +1,24 @@
+gcloud projects add-iam-policy-binding graphic-adviser-422016-k7 \
+--member "serviceAccount:service-1097944015704@compute-system.iam.gserviceaccount.com" \
+--role "roles/compute.instanceAdmin.v1"
+
+
+
+MY CRED : 
+
+Compute Engine System service account service-1097944015704@compute-system.iam.gserviceaccount.com needs to have [compute.instances.start,compute.instances.stop] permissions applied in order to perform this operation.
+
+The command you provided is a Google Cloud command-line interface (CLI) command. Let's break it down:
+
+gcloud: This is the command-line interface for Google Cloud Platform (GCP). It allows you to manage your GCP resources and services from the command line.
+projects add-iam-policy-binding: This part of the command instructs gcloud to add an Identity and Access Management (IAM) policy binding to a GCP project. IAM policies control who has access to your project's resources and what actions they can perform.
+graphic-adviser-422016-k7: This is the ID of the GCP project to which the IAM policy binding will be added. Replace it with the ID of your actual GCP project.
+--member "serviceAccount:service-1097944015704@compute-system.iam.gserviceaccount.com": This specifies the member (or entity) to which the role will be granted. In this case, it's a service account with the email address service-1097944015704@compute-system.iam.gserviceaccount.com. Service accounts are used to provide access to resources or perform actions on behalf of an application or service.
+--role "roles/compute.instanceAdmin.v1": This specifies the role to grant to the member. In this case, it's the role roles/compute.instanceAdmin.v1, which grants permission to manage Compute Engine instances.
+So, in summary, this command grants the compute.instanceAdmin.v1 role to the specified service account (service-1097944015704@compute-system.iam.gserviceaccount.com) in the GCP project identified by graphic-adviser-422016-k7. This role allows the service account to manage Compute Engine instances within the project.
+
+
+
+
+
+

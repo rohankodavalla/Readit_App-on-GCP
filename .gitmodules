@@ -1,0 +1,3 @@
+[submodule "GCP_ReadIt"]
+	path = GCP_ReadIt
+	url = https://github.com/rohankodavalla/GCP_ReadIt.git

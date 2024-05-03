@@ -1,0 +1,104 @@
+In VS Code
+===========
+dotnet publish -o publish --configuration release
+
+Go to the folder
+Remove:
+Microsoft.CodeAnalysis.*
+Microsoft.VisualStudio.*
+NuGet.*
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX	DO ONLY IF YOU HAVE WINDOWS, I HAVE MAC SO NO PUTTY ##############
+Download PuTTy
+==============
+https://www.putty.org/
+
+Generate SSH Key using PuttyGen
+===============================
+Key comment should be your username
+On Windows, save the Private Key file to C:\
+Add public SSH key to the VM keys
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+WHAT I SHOULD DO INSTEAD IS - 
+
+To upload a file from your local macOS machine to a Google Cloud Platform (GCP) Compute Engine VM instance, you can use several methods. Here are two common approaches:
+
+1.Using gcloud compute scp Command:
+
+You can use the gcloud compute scp command to securely copy files between your local machine and a VM instance. Here's how you can use it:
+
+gcloud compute scp [LOCAL_FILE_PATH] [VM_INSTANCE_NAME]:[REMOTE_DESTINATION_PATH] --zone [ZONE]
+
+Replace [LOCAL_FILE_PATH] with the path to the file on your local macOS machine, [VM_INSTANCE_NAME] with the name of your VM instance, [REMOTE_DESTINATION_PATH] with the path where you want to copy the file on the VM instance, and [ZONE] with the zone where your VM instance is located.
+For example:
+
+gcloud compute scp /path/to/local/file.txt my-instance:/home/user/file.txt --zone us-central1-a
+
+2. Using Secure Copy (SCP) Command:
+If you have SSH access to your VM instance, you can use the scp command directly from your macOS terminal:
+
+scp [LOCAL_FILE_PATH] [USERNAME]@[EXTERNAL_IP]:[REMOTE_DESTINATION_PATH]
+
+Replace [LOCAL_FILE_PATH] with the path to the file on your local macOS machine, [USERNAME] with your username on the VM instance, [EXTERNAL_IP] with the external IP address of the VM instance, and [REMOTE_DESTINATION_PATH] with the path where you want to copy the file on the VM instance.
+For example:
+
+scp /path/to/local/file.txt username@35.123.45.678:/home/username/file.txt
+
+====================
+SEE PDF I CREATED 51,52 SECTIONS FOR HOW TO USE SSH KEYS TO CONNECT MAC TO VM 
+====================
+
+
+
+FOLLOW BELOW STEPS ON GCP VM INSTANCE >>
+
+
+Debian .NET Commands
+====================
+wget https://packages.microsoft.com/config/debian/11/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+rm packages-microsoft-prod.deb
+
+sudo apt-get update && \
+  sudo apt-get install -y aspnetcore-runtime-6.0
+
+dotnet --info
+
+mkdir catalog
+cd catalog
+pwd
+* copy the folder path *
+
+
+XXXXXXXXXXXXXXXXXXXX-------  NOW USE SCP CMD ABOVE (refer pdf) AND DONT FOLLOW BELOW  --------XXXXXXXXXX
+
+Copy files from local computer to the VM using SCP
+=================================================
+* From the VS Code terminal *
+cd publish
+pscp -r -i c:\catalog-ssh.ppk * {USERNAME}@{IP_ADDRESS}:/home/{USERNAME}/catalog
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+Do below - 
+
+Set Production Environment Variable and run the app
+===================================================
+* In PuTTy: * not putty , in vm cmd line do this - 
+export ASPNETCORE_ENVIRONMENT=Production
+dotnet catalog.dll
+
+* Change firewall rule to open the 8080 port *
+
+Startup Script
+==============
+#!/bin/bash
+export ASPNETCORE_ENVIRONMENT=Production 
+cd /home/rohankodavalla/catalog
+dotnet catalog.dll
+
+
+
+

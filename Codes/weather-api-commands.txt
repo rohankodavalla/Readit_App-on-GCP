@@ -1,0 +1,14 @@
+sudo apt install git
+
+sudo apt update
+
+sudo apt install nodejs
+
+sudo git clone https://github.com/memilavi/weatherAPI.git
+
+cd weatherAPI
+
+sudo apt install npm
+
+npm start
+
