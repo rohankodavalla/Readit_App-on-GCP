@@ -25,5 +25,12 @@ Building ReadIt! application on GCP.
      - Kubernetes, GKE, GKE types
      - Deploying cart to GKE
 
-6. **None**
+6. **Cloud Function:**
+   - Slide 10
+   - codes for cloud function >> order-baseline
+   - google function install and cloud function command txt files
+   - Overview of what was done , used Postman
+   - Quiz
+
+7. COMPUTE SUMMARY.pdf
 
