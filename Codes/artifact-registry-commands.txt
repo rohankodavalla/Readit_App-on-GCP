@@ -1,0 +1,13 @@
+Show repositories list
+======================
+gcloud artifacts repositories list
+
+Show current project
+====================
+gcloud config get-value project
+
+
+Cloud Build Command
+===================
+gcloud builds submit --region=us-central1 --tag <ARTIFACT_REGISTRY_URL>/<PROJECT_ID>/my-repo/cart:v1
+
