@@ -1,1 +1,12 @@
 gcloud functions deploy order-function --gen2 --runtime=dotnet6 --region=europe-west4 --source=. --entry-point=order_function.Function --trigger-http --allow-unauthenticated
+
+
+
+========================================================================================
+CHANGING MY REGION to 
+
+us-central1
+
+=======================================================================================
+
+gcloud functions deploy order-function --gen2 --runtime=dotnet6 --region=us-central1 --source=. --entry-point=order_function.Function --trigger-http --allow-unauthenticated
