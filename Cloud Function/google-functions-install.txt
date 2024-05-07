@@ -1,0 +1,3 @@
+dotnet new -i Google.Cloud.Functions.Templates
+
+dotnet new gcf-http
