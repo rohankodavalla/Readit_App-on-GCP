@@ -1,0 +1,27 @@
+Show repositories list
+======================
+gcloud artifacts repositories list
+
+Show current project , to find project id 
+=========================================
+gcloud config get-value project
+
+
+Cloud Build Command
+===================
+gcloud builds submit --region=us-central1 --tag <ARTIFACT_REGISTRY_URL>/<PROJECT_ID>/my-repo/cart:v1
+
+
+==================================================================================
+
+
+"northamerica-northeast1-docker.pkg.dev " is my ARTIFACT_REGISTRY_URL got from 'Setup Instructions' in my-repo , artifact registry 
+
+So >>
+gcloud builds submit --region=us-central1 --tag northamerica-northeast1-docker.pkg.dev/<PROJECT_ID>/my-repo/cart:v1
+
+
+graphic-adviser-422016-k7 is my project id 
+So >>
+
+gcloud builds submit --region=us-central1 --tag northamerica-northeast1-docker.pkg.dev/graphic-adviser-422016-k7/my-repo/cart:v1
