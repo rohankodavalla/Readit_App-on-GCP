@@ -32,5 +32,12 @@ Building ReadIt! application on GCP.
    - Overview of what was done , used Postman
    - Quiz
 
-7. COMPUTE SUMMARY.pdf
+7. COMPUTE SUMMARY.pdf (Slide 11)
+
+8. **Networking:**
+   - Slide 12
+   - CIDR notations
+   - Flowchart of private service access vs private service connect vs private google access
+   - Understanding private service access vs private service connect vs private google access
+   - Quiz
 
