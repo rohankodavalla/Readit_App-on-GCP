@@ -41,3 +41,13 @@ Building ReadIt! application on GCP.
    - Understanding private service access vs private service connect vs private google access
    - Quiz
 
+9. **Data Store Services:**
+   - Slide 13
+   - Different Data store solutions available
+   - Cloud SQL - Creating and Connecting to Cloud SQL, Securing the Catalog Database Connection, Securing the Inventory Database Connection
+   - AlloyDB , Spanner, SQL vs NoSQL,Firestore,BigQuery
+   - BigTable - Connecting the Orders Function to BigTable, Deleting BigTable
+   - Memorystore- Creating Memorystore and Connecting to the Catalog, Connecting Cloud Run to Memorystore, Connecting GKE to Memorystore
+   - Cloud Storage - Connecting Order Function to Cloud Storage, Connecting Shopping Cart to Order Function
+   - Using Signed URL
+   - Quiz
