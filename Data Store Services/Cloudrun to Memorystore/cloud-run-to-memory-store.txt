@@ -1,0 +1,15 @@
+gcloud run deploy cart --allow-unauthenticated --vpc-connector default-connector --set-env-vars MemorystoreConString=10.91.33.3:6379 --source .
+
+
+10.122.49.3:6379 >> my redis ip
+
+So my command is - 
+
+gcloud run deploy cart --allow-unauthenticated --vpc-connector default-connector --set-env-vars MemorystoreConString=10.122.49.3:6379 --source .
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Gke : 
+
+Image -  us-central1-docker.pkg.dev/graphic-adviser-422016-k7/cloud-run-source-deploy/cart:latest

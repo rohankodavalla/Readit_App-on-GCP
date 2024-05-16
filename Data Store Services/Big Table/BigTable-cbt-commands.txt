@@ -1,0 +1,27 @@
+BigTable cbt commands
+=====================
+
+// Create configuration file
+echo project = PROJECT_ID >> ~/.cbtrc && echo instance = readit-bt >> ~/.cbtrc
+
+// Display contents of configuration file
+cat ~/.cbtrc
+
+// List tables
+cbt ls
+
+// List column families of the orders tables
+cbt ls orders
+
+// Insert data into table
+cbt set orders order#17 omd:user=davidj
+
+// Read data from a table
+cbt read orders
+
+// Get count of rows in a table
+cbt count orders
+
+// Delete a row in the table
+cbt deleterow orders order#17
+

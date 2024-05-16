@@ -1,0 +1,26 @@
+Generate private key
+====================
+gcloud iam service-accounts keys create signed-url-key.json --iam-account=SERVICE_ACCOUNT
+
+1097944015704-compute@developer.gserviceaccount.com
+
+gcloud iam service-accounts keys create signed-url-key.json --iam-account=1097944015704-compute@developer.gserviceaccount.com
+
+================================================================================================
+
+Generate Signed URL
+===================
+gcloud storage sign-url gs://BUCKET_NAME/OBJECT_NAME --private-key-file=signed-url-key.json --duration=10m
+
+
+gcloud storage sign-url gs://rohan-readit-orders/16.jpeg --private-key-file=signed-url-key.json --duration=10m
+
+If above throws error then run this - 
+
+gsutil signurl -d 1d signed-url-key.json gs://rohan-readit-orders/16.jpeg
+
+================================================================================================
+Preparations
+============
+pip install pyopenssl
+export CLOUDSDK_PYTHON_SITEPACKAGES=1
