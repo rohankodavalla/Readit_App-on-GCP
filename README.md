@@ -47,7 +47,7 @@ Building ReadIt! application on GCP.
    - Cloud SQL - Creating and Connecting to Cloud SQL, Securing the Catalog Database Connection, Securing the Inventory Database Connection
    - AlloyDB , Spanner, SQL vs NoSQL,Firestore,BigQuery
    - BigTable - Connecting the Orders Function to BigTable, Deleting BigTable
-   - Memorystore- Creating Memorystore and Connecting to the Catalog, Connecting Cloud Run to Memorystore, Connecting GKE to Memorystore
+   - Memorystore- Creating Memorystore and Connecting Memorystore to the Catalog, Cloud Run, GKE 
    - Cloud Storage - Connecting Order Function to Cloud Storage, Connecting Shopping Cart to Order Function
    - Using Signed URL
    - Quiz
