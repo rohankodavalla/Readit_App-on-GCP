@@ -3,3 +3,7 @@ found out that catalog vm is not working,meaning the load balancer didnt work an
 catalog from scratch, connect to sql,redis,load balancer and change the ips correspondingly in sql, load balancer firewall etc.
 
 so uploading latest catlaog file and rest of otherstoo 
+video 132,143,144 >> 144 i didnt not delete vm info but lets see
+
++++++++++++++
+now added cart > appsetting.json , did 2 changes >> now cart is also working fine. video 172
