@@ -47,6 +47,12 @@ scp /path/to/local/file.txt username@35.123.45.678:/home/username/file.txt
 
 ====================
 SEE PDF I CREATED 51,52 SECTIONS FOR HOW TO USE SSH KEYS TO CONNECT MAC TO VM 
+
+
+scp -i ~/.ssh/gcpkey -r * rohankodavalla@35.203.76.101:/home/rohankodavalla/catalog
+
+scp -i ~/.ssh/gcpkey -r * rohankodavalla@35.203.76.101:/home/rohankodavalla/catalog
+
 ====================
 
 
