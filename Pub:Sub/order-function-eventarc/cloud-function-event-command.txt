@@ -1,0 +1,1 @@
+gcloud functions deploy order-function-event --gen2 --runtime=dotnet6 --region=europe-west4 --source=. --entry-point=order_function.Function --trigger-topic=orders --allow-unauthenticated
