@@ -1,5 +1,5 @@
 ///////////
-// FIRST - moidfy the:
+// FIRST - moidfy the following in Startup.cs:
 // private bool useInMemory = true;
 // to:
 // private bool useInMemory = false;
