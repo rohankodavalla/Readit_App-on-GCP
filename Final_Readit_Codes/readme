@@ -1,0 +1,5 @@
+after some issues encountered in data store services part (as commented in that respective commit at the folder location),
+found out that catalog vm is not working,meaning the load balancer didnt work and always gave "unhealthy upstream" , so had to setup 
+catalog from scratch, connect to sql,redis,load balancer and change the ips correspondingly in sql, load balancer firewall etc.
+
+so uploading latest catlaog file and rest of otherstoo 
