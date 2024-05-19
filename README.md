@@ -67,3 +67,8 @@ Building ReadIt! application on GCP.
     - Slide 16
     - Quiz
     - scripts for IAM inventory
+
+13. **Monitoring:**
+    - Cloud Logging, Configuring Logs, Logs Explorer, Using Logs Explorer, Using Alerts, Log Analytics, Using Log Analytics, Metrics, Using Metrics, Dashboards, Using Dashboards
+    - Slide 17
+    - Quiz
