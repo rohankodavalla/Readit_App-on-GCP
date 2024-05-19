@@ -60,9 +60,9 @@ Building ReadIt! application on GCP.
     - Slide 15 , Pub/Sub and Eventarc differences and uses
     - Quiz
 
-**Final_Readit_Codes**
+11. **Final_Readit_Codes**
 
-11. **Identity Management:**
+12. **Identity Management:**
     - Cloud IAM, Principals, Synchronizing Cloud IAM with on-premises Active Directory, Roles, Allow Policy, Assigning Roles, Quotas, Managing Quotas,Identity Platform, Configuring Identity Platform, Configuring the Inventory App to use Identity Platform
     - Slide 15
     - Quiz
