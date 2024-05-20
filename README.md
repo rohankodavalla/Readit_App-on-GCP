@@ -72,3 +72,11 @@ Building ReadIt! application on GCP.
     - Cloud Logging, Configuring Logs, Logs Explorer, Using Logs Explorer, Using Alerts, Log Analytics, Using Log Analytics, Metrics, Using Metrics, Dashboards, Using Dashboards
     - Slide 17
     - Quiz
+
+14. **Tags and labels:**
+    - Slide 18
+
+15. **Security:**
+    - Slide 19 = Secret Manager , Cloud Armour + codes
+    - quiz
+      
