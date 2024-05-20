@@ -1,0 +1,1 @@
+evaluatePreconfiguredWaf('sqli-v33-stable', {'sensitivity': 1}) 
