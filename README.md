@@ -79,4 +79,14 @@ Building ReadIt! application on GCP.
 15. **Security:**
     - Slide 19 = Secret Manager , Cloud Armour + codes
     - quiz
+   
+16. **Deployment Manager:**
+    - Slide 20 
+    - template for DM (IaaC type , like a config file) and gcloud command
+
+17. **Disaster Recovery:**
+    - Slide 21 = DR, RPO, RTO
+    - DR of data >> RPO , DR of Compute >> RTO
+    - Routing in DR
+    - quiz
       
