@@ -90,3 +90,4 @@ Building ReadIt! application on GCP.
     - Routing in DR
     - quiz
       
+18. **Cost Management, Organization Policies, Architecting Apps for GCP, Migrating to Cloud**
