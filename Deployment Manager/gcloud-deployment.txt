@@ -1,0 +1,1 @@
+gcloud deployment-manager deployments create vm-deployment --config deployment-manager-template.txt
