@@ -91,3 +91,15 @@ Building ReadIt! application on GCP.
     - quiz
       
 18. **Cost Management, Organization Policies, Architecting Apps for GCP, Migrating to Cloud, Advanced Services**
+
+
+Certification info - 
+
+4 case studies - 
+
+https://docs.google.com/forms/d/e/1FAIpQLSf54f7FbtSJcXUY6-DUHfBG31jZ3pujgb8-a5io_9biJsNpqg/viewform?fbzx=-1197929713395858014
+
+https://cloud.google.com/learn/certification/guides/professional-cloud-architect
+
+https://mashutosh20.medium.com/solution-case-studies-gcp-professional-cloud-architect-cd85824c83c8
+
