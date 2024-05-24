@@ -1,6 +1,10 @@
 Building ReadIt! application on GCP. 
 =====================================================================
-         
+
+<img width="1360" alt="Screenshot 2024-05-24 at 5 10 12 PM" src="https://github.com/rohankodavalla/GCP_ReadIt/assets/37825947/be17235f-7454-47a0-8b49-b4a5d247c21e">
+
+
+
 **Contents:**
 
 1. **Codes:**
