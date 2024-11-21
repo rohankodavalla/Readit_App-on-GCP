@@ -4,106 +4,84 @@ Building ReadIt! application on GCP.
 <img width="1360" alt="Screenshot 2024-05-24 at 5 10 12 PM" src="https://github.com/rohankodavalla/GCP_ReadIt/assets/37825947/be17235f-7454-47a0-8b49-b4a5d247c21e">
 
 
+ReadIt Cloud System is a cloud-native, scalable, and resilient e-commerce solution implemented on Google Cloud Platform (GCP). This project demonstrates best practices in data engineering, microservices, and cloud architecture to create a highly available online shopping application.
 
-**Contents:**
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
-1. **Codes:**
-   - Contains all the code for ReadIt! code with scripts for Compute Engine.
+**Features**
+- Scalable Microservices: Modular design with services like Catalog, Inventory, Cart, and Orders deployed across various GCP offerings.
+- Cloud-Native Data Engineering: Implementation of data storage, processing, and pipeline management using services like Cloud SQL, Cloud Bigtable, and Pub/Sub.
+- High Availability and Load Balancing:
+   - Cloud Load Balancers ensure efficient traffic distribution.
+   - Use of multiple VPCs for secure and isolated network communication.
+- Event-Driven Design: Leveraging Eventarc and Pub/Sub for real-time communication between services.
+- Secure and Reliable Storage:
+   - Secret Manager for sensitive information.
+   - Cloud Storage for durable and distributed data storage.
+- Comprehensive Monitoring:
+   - Cloud Monitoring and Cloud Logging for real-time insights and performance tracking.
+ 
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
-2. **Compute Engine:**
-   - Slides 1-7 PDFs & SSH setup.
+**Architecture Overview**
 
-3. **Resources List Excel:**
-   - Information of VMs and flow of setup of GCP.
-
-4. **App Engine:**
-   - Slide 8, quiz, tips, and "gcloud-deploy-app-from-vscode.pdf".
-
-5. **Containers:**
-   - Slide 9, code for cart, quiz.
-     - Docker
-     - Artifact Registry, Artifact Registry Repo, Deploy Cart to Artifact Registry
-     - Cloud Run
-     - Deploying cart to Cloud Run
-     - Deploying cart to Cloud Run from Source (VSCode)
-     - Kubernetes, GKE, GKE types
-     - Deploying cart to GKE
-
-6. **Cloud Function:**
-   - Slide 10
-   - codes for cloud function >> order-baseline
-   - google function install and cloud function command txt files
-   - Overview of what was done , used Postman
-   - Quiz
-
-7. COMPUTE SUMMARY.pdf (Slide 11)
-
-8. **Networking:**
-   - Slide 12
-   - CIDR notations
-   - Flowchart of private service access vs private service connect vs private google access
-   - Understanding private service access vs private service connect vs private google access
-   - Quiz
-
-9. **Load Balancers:**
-   - Slide 13 , catalog v to loadbalancer
-   - Quiz
-
-9. **Data Store Services:**
-   - Slide 14
-   - Different Data store solutions available
-   - Cloud SQL - Creating and Connecting to Cloud SQL, Securing the Catalog Database Connection, Securing the Inventory Database Connection
-   - AlloyDB , Spanner, SQL vs NoSQL,Firestore,BigQuery
-   - BigTable - Connecting the Orders Function to BigTable, Deleting BigTable
-   - Memorystore- Creating Memorystore and Connecting Memorystore to the Catalog, Cloud Run, GKE 
-   - Cloud Storage - Connecting Order Function to Cloud Storage, Connecting Shopping Cart to Order Function
-   - Using Signed URL
-   - Quiz
-
-10. **Messaging - Pub/Sub:**
-    - Slide 15 , Pub/Sub and Eventarc differences and uses
-    - Quiz
-
-11. **Final_Readit_Codes**
-
-12. **Identity Management:**
-    - Cloud IAM, Principals, Synchronizing Cloud IAM with on-premises Active Directory, Roles, Allow Policy, Assigning Roles, Quotas, Managing Quotas,Identity Platform, Configuring Identity Platform, Configuring the Inventory App to use Identity Platform
-    - Slide 16
-    - Quiz
-    - scripts for IAM inventory
-
-13. **Monitoring:**
-    - Cloud Logging, Configuring Logs, Logs Explorer, Using Logs Explorer, Using Alerts, Log Analytics, Using Log Analytics, Metrics, Using Metrics, Dashboards, Using Dashboards
-    - Slide 17
-    - Quiz
-
-14. **Tags and labels:**
-    - Slide 18
-
-15. **Security:**
-    - Slide 19 = Secret Manager , Cloud Armour + codes
-    - quiz
-   
-16. **Deployment Manager:**
-    - Slide 20 
-    - template for DM (IaaC type , like a config file) and gcloud command
-
-17. **Disaster Recovery:**
-    - Slide 21 = DR, RPO, RTO
-    - DR of data >> RPO , DR of Compute >> RTO
-    - Routing in DR
-    - quiz
-      
-18. **Cost Management, Organization Policies, Architecting Apps for GCP, Migrating to Cloud, Advanced Services**
+The project architecture is designed with a focus on scalability, modularity, and high availability. Below is a visual representation of the system:
 
 
-Certification info - 
+Key Components:
 
-4 case studies - 
+   1. **IAM**: For secure authentication and authorization.
+   2. **Inventory Service**: Built with App Engine for scalable management of product stock.
+   3. **Catalog Service**: Hosted on Compute Engine, backed by Cloud SQL for relational database storage.
+   4. **Weather API**: Custom API hosted on Compute Engine for personalized user experiences.
+   5. **Shopping Cart**: Built with GKE and Cloud Run, ensuring seamless cart management for users.
+   6. **Order Processing**:
+         - Event-driven system with Pub/Sub for order notifications.
+         - Serverless compute with Cloud Functions for real-time order updates.
+         - Orders stored in Cloud Bigtable for low-latency, high-throughput access.
+   7. **Monitoring & Logging**:
+         - Cloud-native tools provide detailed logs and dashboards for observability.
+     
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
-https://docs.google.com/forms/d/e/1FAIpQLSf54f7FbtSJcXUY6-DUHfBG31jZ3pujgb8-a5io_9biJsNpqg/viewform?fbzx=-1197929713395858014
+**Technologies and Tools Used**
 
-https://cloud.google.com/learn/certification/guides/professional-cloud-architect
+**Cloud Services**
+- Google Cloud Platform (GCP): App Engine, Compute Engine, Cloud SQL, Cloud Bigtable, Cloud Storage, Cloud Run, Pub/Sub, Eventarc, GKE, Identity Platform, Cloud Monitoring, Cloud Logging.
 
-https://mashutosh20.medium.com/solution-case-studies-gcp-professional-cloud-architect-cd85824c83c8
+**Programming and Frameworks**
+- Python: For serverless and backend logic.
+- JavaScript: Frontend for interactive user experiences.
+
+**Security**
+- IAM: User authentication and resource access control.
+- Secret Manager: Management of sensitive credentials.
+  
+**Data Engineering Tools**
+- Cloud SQL: Relational database for catalog data.
+- Cloud Bigtable: NoSQL database for scalable and low-latency order management.
+- Cloud Storage: Durable and highly available file storage.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Use Cases for Data Engineering Roles**
+This project highlights critical data engineering practices, including:
+
+   1. ETL Pipelines:
+         - Transforming and loading catalog and order data into Cloud SQL and Bigtable.
+         - Real-time data streaming with Pub/Sub.
+   2. Data Modeling:
+         - Relational design for inventory and catalog data.
+         - NoSQL schema for optimized read/write performance in order management.
+   3. Data Pipeline Automation:
+         - Integration of Eventarc and Cloud Functions for automated, event-triggered workflows.
+   4. Monitoring and Observability:
+         - Implementation of comprehensive monitoring tools to ensure service reliability.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+**Future Enhancements**
+- Add analytics dashboards using BigQuery and Looker Studio.
+- Expand support for multi-region deployments for improved disaster recovery.
+
 
