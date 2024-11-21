@@ -1,7 +1,8 @@
 Building ReadIt! application on GCP. 
 =====================================================================
 
-<img width="1360" alt="Screenshot 2024-05-24 at 5 10 12 PM" src="https://github.com/rohankodavalla/GCP_ReadIt/assets/37825947/be17235f-7454-47a0-8b49-b4a5d247c21e">
+![ReadIt Cloud System](https://raw.githubusercontent.com/rohankodavalla/Readit_App-on-GCP/main/readit.png)
+
 
 
 ReadIt Cloud System is a cloud-native, scalable, and resilient e-commerce solution implemented on Google Cloud Platform (GCP). This project demonstrates best practices in data engineering, microservices, and cloud architecture to create a highly available online shopping application.
